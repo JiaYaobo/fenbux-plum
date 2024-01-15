@@ -43,7 +43,7 @@ dev = [
 ]
 
 [project.urls]
-repository = "https://github.com/beartype/plum"
+repository = "https://github.com/JiaYaobo/fenbux-plum"
 
 [tool.hatch.build]
 include = ["fbx_plum*"]
