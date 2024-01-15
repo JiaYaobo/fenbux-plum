@@ -15,7 +15,7 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Development Status :: 5 - Production/Stable",
 ]
-dynamic = ["version"]
+version = "0.0.3"
 
 requires-python = ">=3.8"
 dependencies = [
@@ -50,9 +50,6 @@ include = ["fbx_plum*"]
 
 [tool.hatch.version]
 source = "vcs"
-
-[tool.hatch.build.hooks.vcs]
-version-file = "fbx_plum/_version.py"
 
 # Development tools
 [tool.coverage.run]
