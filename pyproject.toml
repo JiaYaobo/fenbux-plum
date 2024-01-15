@@ -3,10 +3,10 @@ requires = ["hatchling>=1.8.0", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "plum-dispatch"
+name = "fenbux-plum-dispatch"
 description="Multiple dispatch in Python"
 authors=[
-    {name = "Wessel Bruinsma", email="wessel.p.bruinsma@gmail.com"},
+    {name = "Jia Yaobo", email="januzaj2011@163.com"},
 ]
 license = {text= "MIT"}
 readme = "README.md"
@@ -46,19 +46,19 @@ dev = [
 repository = "https://github.com/beartype/plum"
 
 [tool.hatch.build]
-include = ["plum*"]
+include = ["fbx_plum*"]
 
 [tool.hatch.version]
 source = "vcs"
 
 [tool.hatch.build.hooks.vcs]
-version-file = "plum/_version.py"
+version-file = "fbx_plum/_version.py"
 
 # Development tools
 [tool.coverage.run]
 branch = true
 command_line = "-m pytest --verbose test"
-source = ["plum"]
+source = ["fbx_plum"]
 
 [tool.pytest.ini_options]
 testpaths = [
@@ -87,7 +87,7 @@ exclude = '''
 
 [tool.isort]
 profile = "black"
-src_paths = ["plum", "tests"]
+src_paths = ["fbx_plum", "tests"]
 
 
 [tool.ruff]

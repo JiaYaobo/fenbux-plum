@@ -2,7 +2,7 @@ from typing import Tuple
 
 import numpy as np
 
-from plum import Dispatcher, dispatch
+from fbx_plum import Dispatcher, dispatch
 from tests.util import benchmark
 
 
