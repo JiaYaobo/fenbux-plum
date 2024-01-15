@@ -2,8 +2,8 @@ from typing import Union
 
 import pytest
 
-from plum import activate_union_aliases, deactivate_union_aliases, set_union_alias
-from plum.alias import _aliased_unions
+from fbx_plum import activate_union_aliases, deactivate_union_aliases, set_union_alias
+from fbx_plum.alias import _aliased_unions
 
 
 @pytest.fixture()

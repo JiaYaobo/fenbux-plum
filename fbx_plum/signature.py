@@ -23,7 +23,7 @@ class Signature(Comparable):
     This object differs structurally from the return value of :func:`inspect.signature`
     as it only contains information necessary for performing dispatch.
 
-    For example, for the current implementation of Plum, which does not dispatch on
+    For example, for the current implementation of fbx_plum, which does not dispatch on
     keyword arguments, those are left out of this signature object. Similarly, return
     type information and argument names are not present.
 

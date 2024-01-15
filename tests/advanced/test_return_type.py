@@ -2,7 +2,7 @@ from typing import Union
 
 import pytest
 
-from plum import Dispatcher, add_conversion_method
+from fbx_plum import Dispatcher, add_conversion_method
 
 
 def test_return_type():

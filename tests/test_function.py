@@ -5,15 +5,15 @@ import typing
 
 import pytest
 
-from plum import Dispatcher
-from plum.function import Function, _convert, _owner_transfer
-from plum.method import Method
-from plum.resolver import (
+from fbx_plum import Dispatcher
+from fbx_plum.function import Function, _convert, _owner_transfer
+from fbx_plum.method import Method
+from fbx_plum.resolver import (
     AmbiguousLookupError,
     NotFoundLookupError,
     _change_function_name,
 )
-from plum.signature import Signature
+from fbx_plum.signature import Signature
 
 
 def test_convert_reference():
@@ -236,10 +236,10 @@ def test_simple_doc(monkeypatch):
     def f(x: str):
         """Second."""
 
-    monkeypatch.setitem(os.environ, "PLUM_SIMPLE_DOC", "1")
+    monkeypatch.setitem(os.environ, "fbx_plum_SIMPLE_DOC", "1")
     assert f.__doc__ == "First."
 
-    monkeypatch.setitem(os.environ, "PLUM_SIMPLE_DOC", "0")
+    monkeypatch.setitem(os.environ, "fbx_plum_SIMPLE_DOC", "0")
     expected_doc = """
     First.
 

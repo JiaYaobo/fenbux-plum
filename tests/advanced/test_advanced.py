@@ -6,7 +6,7 @@ from typing import Union
 
 import pytest
 
-from plum import Dispatcher, Function, NotFoundLookupError
+from fbx_fbx_plum import Dispatcher, Function, NotFoundLookupError
 
 
 def test_keywords():

@@ -1,15 +1,15 @@
 import pytest
 
-from plum import Dispatcher
-from plum import autoreload as ar
-from plum.function import NotFoundLookupError
+from fbx_plum import Dispatcher
+from fbx_plum import autoreload as ar
+from fbx_plum.function import NotFoundLookupError
 
 
 def test_autoreload_activate_deactivate():
     # We shouldn't be able to deactivate before activation.
     with pytest.raises(
         RuntimeError,
-        match=r"(?i)plum autoreload module was never activated",
+        match=r"(?i)fbx_plum autoreload module was never activated",
     ):
         ar.deactivate_autoreload()
 
@@ -20,7 +20,7 @@ def test_autoreload_activate_deactivate():
     # Check that it is activated.
     assert ar._update_instances_original is not None
     assert ar._update_instances_original.__module__ == "IPython.extensions.autoreload"
-    assert iar.update_instances.__module__ == "plum.autoreload"
+    assert iar.update_instances.__module__ == "fbx_plum.autoreload"
 
     ar.deactivate_autoreload()
 

@@ -1,6 +1,6 @@
 from typing import List, Union
 
-from plum import Dispatcher, Function, clear_all_cache
+from fbx_plum import Dispatcher, Function, clear_all_cache
 
 from .util import benchmark
 

@@ -5,7 +5,7 @@ from typing import Optional, Tuple, Union
 import numpy as np
 import pytest
 
-from plum import (
+from fbx_plum import (
     Dispatcher,
     Kind,
     ModuleType,
@@ -15,7 +15,7 @@ from plum import (
     parametric,
     type_parameter,
 )
-from plum.parametric import CovariantMeta, is_concrete, is_type
+from fbx_plum.parametric import CovariantMeta, is_concrete, is_type
 
 
 def test_covariantmeta():
@@ -552,15 +552,15 @@ def test_val():
     with pytest.raises(ValueError):
         Val[1].__init__(MockVal())
 
-    assert repr(Val[1]()) == "plum.parametric.Val[1]()"
+    assert repr(Val[1]()) == "fbx_plum.parametric.Val[1]()"
 
 
 def test_init_subclass_correct_args():
     # See the following issue:
     #
-    #   https://github.com/beartype/plum/issues/105
+    #   https://github.com/beartype/fbx_plum/issues/105
 
-    from plum import parametric
+    from fbx_plum import parametric
 
     register = set()
 

@@ -1,6 +1,6 @@
 from beartype.door import TypeHint
 
-import plum.function
+import fbx_plum.function
 
 from . import _is_bearable
 from .dispatcher import Dispatcher
@@ -35,7 +35,7 @@ def convert(obj, type_to):
 
 
 # Deliver `convert`.
-plum.function._promised_convert = convert
+fbx_plum.function._promised_convert = convert
 
 
 @_dispatch

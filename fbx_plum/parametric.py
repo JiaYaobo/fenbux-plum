@@ -403,7 +403,7 @@ class Val:
         """
         # Do not deprecate until beartype#276 is solved
         # warnings.warn(
-        #     "`plum.Val` is deprecated and will be removed in a future version. "
+        #     "`fbx_plum.Val` is deprecated and will be removed in a future version. "
         #     "Please use `typing.Literal` instead.",
         #     stacklevel=2,
         # )

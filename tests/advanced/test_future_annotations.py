@@ -5,7 +5,7 @@ from typing import Union
 
 import pytest
 
-from plum import Dispatcher, NotFoundLookupError
+from fbx_plum import Dispatcher, NotFoundLookupError
 
 dispatch = Dispatcher()
 

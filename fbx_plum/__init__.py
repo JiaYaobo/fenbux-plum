@@ -1,4 +1,4 @@
-# Plum previously exported a number of types. As of recently, the user can use the
+# fbx_plum previously exported a number of types. As of recently, the user can use the
 # versions from `typing`. To not break backward compatibility, we still export these
 # types.
 from functools import partial

@@ -34,7 +34,7 @@ _update_instances_original = None
 
 
 def activate_autoreload():
-    """Pirate Autoreload's `update_instance` function to have Plum work with
+    """Pirate Autoreload's `update_instance` function to have fbx_plum work with
     Autoreload."""
     from IPython.extensions import autoreload  # type: ignore
 
@@ -48,19 +48,19 @@ def activate_autoreload():
 
 
 def deactivate_autoreload():
-    """Disable Plum's autoreload hack. This undoes what
+    """Disable fbx_plum's autoreload hack. This undoes what
     :func:`.autoreload.activate_autoreload` did."""
     global _update_instances_original
     if _update_instances_original is None:
-        raise RuntimeError("Plum Autoreload module was never activated.")
+        raise RuntimeError("fbx_plum Autoreload module was never activated.")
 
     from IPython.extensions import autoreload
 
     autoreload.update_instances = _update_instances_original
 
 
-_autoload = os.environ.get("PLUM_AUTORELOAD", "0").lower()
-"""str: Value of `PLUM_AUTORELOAD` environment variable."""
+_autoload = os.environ.get("fbx_plum_AUTORELOAD", "0").lower()
+"""str: Value of `fbx_plum_AUTORELOAD` environment variable."""
 
 if _autoload in ("y", "yes", "t", "true", "on", "1"):  # pragma: no cover
     try:

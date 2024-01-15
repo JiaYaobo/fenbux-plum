@@ -3,14 +3,14 @@
 
 Example::
 
-    >> plum.activate_union_aliases()
+    >> fbx_plum.activate_union_aliases()
 
     >> IntOrFloat = typing.Union[int, float]
 
     >> IntOrFloat
     Union[int, float]
 
-    >> plum.set_union_alias(IntOrFloat, "IntOrFloat")
+    >> fbx_plum.set_union_alias(IntOrFloat, "IntOrFloat")
 
     >> IntOrFloat
     typing.Union[IntOrFloat]

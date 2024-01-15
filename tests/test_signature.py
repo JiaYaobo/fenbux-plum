@@ -6,9 +6,9 @@ from typing import Any, Tuple
 
 import pytest
 
-from plum.signature import Signature as Sig
-from plum.signature import append_default_args, inspect_signature
-from plum.util import Missing
+from fbx_plum.signature import Signature as Sig
+from fbx_plum.signature import append_default_args, inspect_signature
+from fbx_plum.util import Missing
 
 
 def test_instantiation_copy():

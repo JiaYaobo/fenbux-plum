@@ -1,7 +1,7 @@
 import pytest
 
-from plum import AmbiguousLookupError, Dispatcher, NotFoundLookupError
-from plum.type import PromisedType
+from fbx_plum import AmbiguousLookupError, Dispatcher, NotFoundLookupError
+from fbx_plum.type import PromisedType
 
 dispatch = Dispatcher()
 

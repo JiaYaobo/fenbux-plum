@@ -4,10 +4,10 @@ import typing
 
 import pytest
 
-import plum.resolver
-from plum.method import Method
-from plum.resolver import AmbiguousLookupError, NotFoundLookupError, Resolver, _document
-from plum.signature import Signature
+import fbx_plum.resolver
+from fbx_plum.method import Method
+from fbx_plum.resolver import AmbiguousLookupError, NotFoundLookupError, Resolver, _document
+from fbx_plum.signature import Signature
 
 
 def test_initialisation():
@@ -82,7 +82,7 @@ def test_document_sphinx(monkeypatch):
 def test_doc(monkeypatch):
     # Let the `pydoc` documenter simply return the docstring. This makes testing
     # simpler.
-    monkeypatch.setattr(plum.resolver, "_document", lambda x, _: x.__doc__)
+    monkeypatch.setattr(fbx_plum.resolver, "_document", lambda x, _: x.__doc__)
 
     r = Resolver()
 

@@ -4,7 +4,7 @@ import typing
 import numpy as np
 import pytest
 
-from plum.util import (
+from fbx_plum.util import (
     Comparable,
     Missing,
     get_class,

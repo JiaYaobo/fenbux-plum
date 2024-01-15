@@ -1,6 +1,6 @@
 import pytest
 
-from plum import Dispatcher, NotFoundLookupError, overload
+from fbx_plum import Dispatcher, NotFoundLookupError, overload
 
 dispatch = Dispatcher()
 

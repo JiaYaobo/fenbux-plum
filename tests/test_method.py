@@ -1,7 +1,7 @@
 from copy import copy
 
-from plum.method import Method
-from plum.signature import Signature
+from fbx_plum.method import Method
+from fbx_plum.signature import Signature
 
 
 def test_instantiation_copy():

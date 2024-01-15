@@ -68,7 +68,7 @@ class Dispatcher:
             else:
                 raise ValueError(
                     f"Signature `{signature}` must be a tuple or of type "
-                    f"`plum.signature.Signature`."
+                    f"`fbx_plum.signature.Signature`."
                 )
 
         def decorator(method):

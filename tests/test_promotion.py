@@ -3,9 +3,9 @@ from typing import Union
 
 import pytest
 
-import plum
-from plum import add_conversion_method, add_promotion_rule, conversion_method
-from plum.promotion import _promotion_rule
+import fbx_plum
+from fbx_plum import add_conversion_method, add_promotion_rule, conversion_method
+from fbx_plum.promotion import _promotion_rule
 
 
 class Num:
@@ -54,28 +54,28 @@ def test_convert(convert):
 def test_convert_resolve_type_hints(convert):
     add_conversion_method(int, float, lambda x: 2.0)
     # The below calls will only work if the type hint is resolved.
-    assert convert(1, plum.ModuleType("builtins", "float")) == 2.0
+    assert convert(1, fbx_plum.ModuleType("builtins", "float")) == 2.0
     # This tests the one in the fallback of `_convert`.
-    assert convert(1, plum.ModuleType("builtins", "int")) == 1
+    assert convert(1, fbx_plum.ModuleType("builtins", "int")) == 1
 
 
 def test_default_conversion_methods():
     # Conversion to `tuple`.
-    assert plum.convert(1, tuple) == (1,)
-    assert plum.convert((1,), tuple) == (1,)
-    assert plum.convert(((1,),), tuple) == ((1,),)
-    assert plum.convert([1], tuple) == (1,)
-    assert plum.convert([(1,)], tuple) == ((1,),)
+    assert fbx_plum.convert(1, tuple) == (1,)
+    assert fbx_plum.convert((1,), tuple) == (1,)
+    assert fbx_plum.convert(((1,),), tuple) == ((1,),)
+    assert fbx_plum.convert([1], tuple) == (1,)
+    assert fbx_plum.convert([(1,)], tuple) == ((1,),)
 
     # Conversion to `list`.
-    assert plum.convert(1, list) == [1]
-    assert plum.convert((1,), list) == [1]
-    assert plum.convert(((1,),), list) == [(1,)]
-    assert plum.convert([1], list) == [1]
-    assert plum.convert([(1,)], list) == [(1,)]
+    assert fbx_plum.convert(1, list) == [1]
+    assert fbx_plum.convert((1,), list) == [1]
+    assert fbx_plum.convert(((1,),), list) == [(1,)]
+    assert fbx_plum.convert([1], list) == [1]
+    assert fbx_plum.convert([(1,)], list) == [(1,)]
 
     # Convert to `str`.
-    assert plum.convert("test".encode(), str) == "test"
+    assert fbx_plum.convert("test".encode(), str) == "test"
 
 
 def test_promote(convert, promote):
@@ -133,13 +133,13 @@ def test_promote(convert, promote):
 
 def test_promote_resolve_type_hints(convert, promote):
     t = _promotion_rule(
-        plum.ModuleType("builtins", "int"),
-        plum.ModuleType("numbers", "Number"),
+        fbx_plum.ModuleType("builtins", "int"),
+        fbx_plum.ModuleType("numbers", "Number"),
     )
     assert t == Number
     t = _promotion_rule(
-        plum.ModuleType("numbers", "Number"),
-        plum.ModuleType("builtins", "int"),
+        fbx_plum.ModuleType("numbers", "Number"),
+        fbx_plum.ModuleType("builtins", "int"),
     )
     assert t == Number
 

@@ -3,8 +3,8 @@ import sys
 from functools import wraps
 from typing import Callable, List, Optional, Tuple, Union
 
-from plum.method import Method
-from plum.signature import Signature
+from fbx_fbx_plum.method import Method
+from fbx_fbx_plum.signature import Signature
 
 __all__ = ["AmbiguousLookupError", "NotFoundLookupError"]
 

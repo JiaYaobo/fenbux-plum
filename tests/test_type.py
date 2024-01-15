@@ -18,7 +18,7 @@ except ImportError:
 
 import pytest
 
-from plum.type import (
+from fbx_plum.type import (
     ModuleType,
     PromisedType,
     ResolvableType,
@@ -27,7 +27,7 @@ from plum.type import (
     resolve_type_hint,
     type_mapping,
 )
-from plum.util import Callable
+from fbx_plum.util import Callable
 
 
 def test_resolvabletype():
